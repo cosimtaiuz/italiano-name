@@ -19,7 +19,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-200 via-white to-red-200 flex flex-col items-center justify-center font-nunito">
-      <nav className="bg-white-200 w-full fixed top-0 shadow-lg">
+      <nav className="bg-white-200 w-full fixed top-0 shadow-lg z-10">
         <div className="container mx-auto px-4 py-4 flex justify-between">
           <div className="flex items-center space-x-4">
             <div className="text-green-500 text-3xl">🍕</div>
@@ -37,6 +37,7 @@ const LandingPage: React.FC = () => {
           </div> */}
         </div>
       </nav>
+      <div className="h-16"></div> {/* This div acts as a spacer */}
       <div className="text-center mt-32 space-y-8 px-4 sm:px-0">
         <h1 className="text-6xl font-bold text-gray-800 mb-4">
           Discover Your Italian Alter Ego!
@@ -99,19 +100,18 @@ const LandingPage: React.FC = () => {
           </div>
         )}
       </div>
-
       {/* New contact section */}
       <footer className="mt-20 mb-8 text-center px-4 sm:px-0">
-        <h2 className="text-lg font-bold text-gray-800 mb-4">
-          Created in 2 hrs by{" "}
-          <a
-            href="https://www.cosimotaiuti.com/"
-            className="underline hover:text-blue-600 transition-colors"
-          >
-            Cosimo Taiuti
-          </a>
-        </h2>
-        <div className="flex justify-center space-x-6">
+        <div className="flex items-center justify-center space-x-4">
+          <h2 className="text-lg font-bold text-gray-800">
+            Created in 2 hrs by{" "}
+            <a
+              href="https://www.cosimotaiuti.com/"
+              className="underline hover:text-blue-600 transition-colors"
+            >
+              Cosimo Taiuti
+            </a>
+          </h2>
           <a
             href="https://x.com/cosimo_taiuti"
             target="_blank"
@@ -119,7 +119,7 @@ const LandingPage: React.FC = () => {
             className="text-blue-400 hover:text-blue-600 transition-colors"
           >
             <svg
-              className="w-8 h-8"
+              className="w-6 h-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -134,7 +134,7 @@ const LandingPage: React.FC = () => {
             className="text-gray-800 hover:text-gray-600 transition-colors"
           >
             <svg
-              className="w-8 h-8"
+              className="w-6 h-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -153,7 +153,7 @@ const LandingPage: React.FC = () => {
             className="text-blue-700 hover:text-blue-900 transition-colors"
           >
             <svg
-              className="w-8 h-8"
+              className="w-6 h-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
