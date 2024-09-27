@@ -38,7 +38,7 @@ const LandingPage: React.FC = () => {
         </div>
       </nav>
       <div className="h-16"></div> {/* This div acts as a spacer */}
-      <div className="text-center mt-32 space-y-8 px-4 sm:px-0">
+      <div className="text-center mt-20 space-y-8 px-4 sm:px-0">
         <h1 className="text-6xl font-bold text-gray-800 mb-4">
           Discover Your Italian Alter Ego!
         </h1>
