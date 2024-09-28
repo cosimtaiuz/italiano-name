@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { generateNameTranslation } from "./actions";
 import Link from "next/link";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const LandingPage: React.FC = () => {
   const [firstName, setFirstName] = useState("");
@@ -95,7 +96,10 @@ const LandingPage: React.FC = () => {
               Congratulations! You&apos;ve been transformed into a true Italian!
             </p>
             <button
-              onClick={() => setShowResult(false)}
+              onClick={() => {
+                setShowResult(false);
+                sendGAEvent("event", "link-turno", { value: "G-GY75ZHZ7GF" });
+              }}
               className="w-full py-3 bg-gradient-to-br from-green-500 to-blue-500 text-white text-lg font-bold rounded-lg hover:from-green-600 hover:to-blue-600 transition-colors flex items-center justify-center"
             >
               <span className="mr-2">🔄</span>
