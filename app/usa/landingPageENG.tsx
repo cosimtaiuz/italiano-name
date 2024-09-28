@@ -1,53 +1,53 @@
 "use client";
 
 import React, { useState } from "react";
-import { generateNameTranslation } from "./actions";
+import { generateNameTranslation } from "../actions";
 import Link from "next/link";
 
-const LandingPage: React.FC = () => {
+const LandingPageENG: React.FC = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [italianName, setItalianName] = useState("");
-  const [italianSurname, setItalianSurname] = useState("");
+  const [americanName, setAmericanName] = useState("");
+  const [americanSurname, setAmericanSurname] = useState("");
   const [showResult, setShowResult] = useState(false);
 
   const handleGenerate = async () => {
     const result = await generateNameTranslation(
       firstName,
       lastName,
-      "Italian"
+      "American"
     );
-    setItalianName(result.translatedName);
-    setItalianSurname(result.translatedSurname);
+    setAmericanName(result.translatedName);
+    setAmericanSurname(result.translatedSurname);
     setShowResult(true);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-300 via-white to-red-300 flex flex-col items-center justify-center font-nunito">
+    <div className="min-h-screen bg-gradient-to-br from-red-300 via-white to-blue-300 flex flex-col items-center justify-center font-nunito">
       <nav className="bg-white/90 w-full fixed top-0 shadow-md z-10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2 sm:space-x-4">
             <div className="text-blue-500 text-2xl sm:text-3xl">🦅</div>
             <a href="#" className="text-red-500 text-xl sm:text-3xl font-bold">
-              <span className="hidden sm:inline">Italian Name-o-Matic</span>
-              <span className="sm:hidden">Italian Name-o-Matic</span>
+              <span className="hidden sm:inline">American Name-o-Matic</span>
+              <span className="sm:hidden">American Name-o-Matic</span>
             </a>
           </div>
           <Link
-            href="/usa"
+            href="/"
             className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-2 sm:px-4 rounded transition-colors"
           >
-            <span className="sm:hidden">🇺🇸</span>
-            <span className="hidden sm:inline">🇺🇸 Switch to American</span>
+            <span className="sm:hidden">🇮🇹</span>
+            <span className="hidden sm:inline">🇮🇹 Switch to Italian</span>
           </Link>
         </div>
       </nav>
       <div className="flex flex-col items-center justify-center text-center pt-28 space-y-8 px-4 sm:px-0">
         <h1 className="text-4xl sm:text-6xl font-bold text-gray-800 ">
-          Discover Your Italian Alter Ego!
+          Discover Your All-American Alter Ego!
         </h1>
         <p className="text-xl sm:text-2xl text-gray-600 mb-6 sm:mb-8">
-          Enter your name to find your Italian alter ego!
+          Enter your name to find your star-spangled alter ego!
         </p>
         {!showResult ? (
           <form
@@ -63,7 +63,7 @@ const LandingPage: React.FC = () => {
                 placeholder="Your First Name"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
-                className="border-2 border-green-500 rounded-lg p-3 w-full focus:ring-2 focus:ring-green-300 placeholder-gray-500"
+                className="border-2 border-blue-500 rounded-lg p-3 w-full focus:ring-2 focus:ring-blue-300 placeholder-gray-500"
               />
             </div>
             <div className="mb-4">
@@ -72,31 +72,32 @@ const LandingPage: React.FC = () => {
                 placeholder="Your Last Name"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
-                className="border-2 border-green-500 rounded-lg p-3 w-full focus:ring-2 focus:ring-green-300 placeholder-gray-500"
+                className="border-2 border-blue-500 rounded-lg p-3 w-full focus:ring-2 focus:ring-blue-300 placeholder-gray-500"
               />
             </div>
             <button
               type="submit"
-              className="w-full py-3 bg-gradient-to-br from-red-500 to-green-500 text-white text-lg font-bold rounded-lg hover:from-red-600 hover:to-green-600 transition-colors flex items-center justify-center"
+              className="w-full py-3 bg-gradient-to-br from-red-500 to-blue-500 text-white text-lg font-bold rounded-lg hover:from-red-600 hover:to-blue-600 transition-colors flex items-center justify-center"
             >
               <span className="mr-2">✨</span>
-              Generate Italian Name
+              Generate American Name
             </button>
           </form>
         ) : (
-          <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md mx-auto transform transition-all duration-500 hover:scale-105">
+          <div className="bg-white rounded-lg shadow-md py-16 w-full max-w-md mx-auto transform transition-all duration-500 hover:scale-105">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Your Italian Alter Ego:
+              Your All-American Alter Ego:
             </h2>
             <div className="text-5xl font-bold mb-6">
-              {italianName} {italianSurname}
+              {americanName} {americanSurname}
             </div>
             <p className="text-xl text-gray-600 mb-6">
-              Congratulations! You&apos;ve been transformed into a true Italian!
+              Congratulations! You&apos;ve been transformed into a true
+              American!
             </p>
             <button
               onClick={() => setShowResult(false)}
-              className="w-full py-3 bg-gradient-to-br from-green-500 to-blue-500 text-white text-lg font-bold rounded-lg hover:from-green-600 hover:to-blue-600 transition-colors flex items-center justify-center"
+              className="w-full py-3 bg-gradient-to-br from-blue-500 to-red-500 text-white text-lg font-bold rounded-lg hover:from-blue-600 hover:to-red-600 transition-colors flex items-center justify-center"
             >
               <span className="mr-2">🔄</span>
               Try Another Name
@@ -105,7 +106,7 @@ const LandingPage: React.FC = () => {
         )}
       </div>
 
-      {/* New contact section */}
+      {/* Footer section */}
       <footer className="mt-16 mb-8 text-center px-4 sm:px-0">
         <h2 className="text-lg font-bold text-gray-800 mb-4">
           Created in 2 hrs by{" "}
@@ -176,4 +177,4 @@ const LandingPage: React.FC = () => {
   );
 };
 
-export default LandingPage;
+export default LandingPageENG;

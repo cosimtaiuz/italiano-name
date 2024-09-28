@@ -8,8 +8,8 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Italian Alter Ego Generator",
-  description: "Discover your Italian alter ego with just your name!",
+  title: "Your Alter Ego Generator",
+  description: "Discover your alter ego with just your name!",
 };
 
 export default function RootLayout({

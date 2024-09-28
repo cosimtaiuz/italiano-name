@@ -1,19 +1,19 @@
 import Head from "next/head";
-import LandingPage from "./landingPage";
+import LandingPageENG from "./landingPageENG";
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Italian Alter Ego Generator</title>
+        <title>American Alter Ego Generator</title>
         <meta
           name="description"
-          content="Discover your Italian alter ego with just your name!"
+          content="Discover your American alter ego with just your name!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <LandingPage />
+        <LandingPageENG />
       </main>
     </div>
   );
