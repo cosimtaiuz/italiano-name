@@ -84,9 +84,9 @@ const LandingPageENG: React.FC = () => {
             </button>
           </form>
         ) : (
-          <div className="bg-white rounded-lg shadow-md py-16 w-full max-w-md mx-auto transform transition-all duration-500 hover:scale-105">
+          <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md mx-auto transform transition-all duration-500 hover:scale-105">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Your All-American Alter Ego:
+              Your American Alter Ego:
             </h2>
             <div className="text-5xl font-bold mb-6">
               {americanName} {americanSurname}
@@ -97,7 +97,7 @@ const LandingPageENG: React.FC = () => {
             </p>
             <button
               onClick={() => setShowResult(false)}
-              className="w-full py-3 bg-gradient-to-br from-blue-500 to-red-500 text-white text-lg font-bold rounded-lg hover:from-blue-600 hover:to-red-600 transition-colors flex items-center justify-center"
+              className="w-full py-3 bg-gradient-to-br from-green-500 to-blue-500 text-white text-lg font-bold rounded-lg hover:from-green-600 hover:to-blue-600 transition-colors flex items-center justify-center"
             >
               <span className="mr-2">🔄</span>
               Try Another Name
