@@ -55,6 +55,9 @@ const LandingPage: React.FC = () => {
             onSubmit={(e) => {
               e.preventDefault();
               handleGenerate();
+              sendGAEvent("event", "generate-italian-name", {
+                value: "G-GY75ZHZ7GF",
+              });
             }}
             className="bg-white rounded-lg shadow-md p-8 w-full max-w-md mx-auto"
           >
@@ -98,7 +101,9 @@ const LandingPage: React.FC = () => {
             <button
               onClick={() => {
                 setShowResult(false);
-                sendGAEvent("event", "link-turno", { value: "G-GY75ZHZ7GF" });
+                sendGAEvent("event", "try-another-name-italian", {
+                  value: "G-GY75ZHZ7GF",
+                });
               }}
               className="w-full py-3 bg-gradient-to-br from-green-500 to-blue-500 text-white text-lg font-bold rounded-lg hover:from-green-600 hover:to-blue-600 transition-colors flex items-center justify-center"
             >
