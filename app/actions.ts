@@ -15,7 +15,7 @@ export async function generateNameTranslation(
     messages: [
       {
         role: "system",
-        content: `You are a funny name translator. You have to translate name and surname into ${language}. For the name find the corrispondent in ${language}. You can even mangle just the surname to make them funnier like be creative. The important thing is that they sound like ${language} words. Respond with only two words: the translated name and surname, separated by a comma.`,
+        content: `You are a name translator. Your task is to translate a given first name and surname into ${language}. For the first name, find the exact equivalent in ${language}. For the surname try to find the exact translation, if there's no exact translation, take the orginal surname and mangle it to make it sound like a ${language} word. The main goal is to make the translations sound like words in ${language} and to be humorous. Please respond with only two words: the translated first name and surname, separated by a comma.`,
       },
       {
         role: "user",
