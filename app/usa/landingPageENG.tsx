@@ -84,7 +84,7 @@ const LandingPageENG: React.FC = () => {
             </button>
           </form>
         ) : (
-          <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md mx-auto transform transition-all duration-500 hover:scale-105">
+          <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md mx-auto transform transition-all duration-500 hover:scale-105 ">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               Your American Alter Ego:
             </h2>

@@ -35,7 +35,7 @@ const LandingPage: React.FC = () => {
           </div>
           <Link
             href="/usa"
-            className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-2 sm:px-4 rounded transition-colors"
+            className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-2 sm:px-4 rounded transition-colors"
           >
             <span className="sm:hidden">🇺🇸</span>
             <span className="hidden sm:inline">🇺🇸 Switch to American</span>
